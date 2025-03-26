@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "blog-app-node-js-production.up.railway.app",
+        hostname: "blog-app-nextjs-production.up.railway.app",
       },
     ],
   },
