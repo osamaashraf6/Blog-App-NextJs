@@ -1,7 +1,6 @@
 "use client"
-import { useState } from "react";
-import ReactQuill from 'react-quill-new';
-import 'react-quill-new/dist/quill.snow.css';
+import { useState, useEffect } from "react";
+import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { radioInputs } from "@/utils/data";
@@ -11,11 +10,18 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import LazyLoadingBtn from "@/features/loading/LazyLoadingBtn";
 
+// Dynamically import ReactQuill with SSR disabled
+const ReactQuill = dynamic(() => import('react-quill-new'), {
+  ssr: false,
+  loading: () => <p>Loading editor...</p>
+});
+import 'react-quill-new/dist/quill.snow.css';
 
 function WritePage() {
   const [quillValue, setQuillValue] = useState("");
   const [quillValidate, setQuillValidate] = useState(false);
-  // const location = useLocation();
+  const [isClient, setIsClient] = useState(false);
+
   const { createOnePostMutation } = usePost();
   const { error, isPending, data } = createOnePostMutation;
   const { currentUser } = useSelector((state: any) => state.user);
@@ -27,12 +33,16 @@ function WritePage() {
     formState: { errors },
   } = useForm();
 
+  // Ensure component only renders on client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const handleSubmitMethod = (data: any) => {
     if (!currentUser) {
       toast.error("Sign in first ! Save as draft for the next time");
     } else {
       if (quillValue === "") {
-        // ! it is not work not change the quillvalidate value, so the error not appeared
         setQuillValidate(true);
       }
 
@@ -59,6 +69,12 @@ function WritePage() {
       setQuillValue("");
     }
   };
+
+  // Prevent rendering on server
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <>
       <section className="py-16">
@@ -105,8 +121,19 @@ function WritePage() {
                 {errors.briefDesc && typeof errors.briefDesc.message === 'string' && <p className="text-red-500">{errors.briefDesc.message}</p>}
                 <div className="formcontrol">
 
-                  <ReactQuill theme="snow" value={quillValue}
-                    onChange={setQuillValue} />
+                  <ReactQuill
+                    value={quillValue}
+                    onChange={setQuillValue}
+                    modules={{
+                      toolbar: [
+                        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                        ['link', 'image']
+                      ]
+                    }}
+                    className="mb-2"
+                  />
                 </div>
                 {quillValidate && (
                   <p className="text-red-500">Detailed Desc is required ! </p>
@@ -154,7 +181,7 @@ function WritePage() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default WritePage
+export default WritePage;
