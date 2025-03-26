@@ -37,23 +37,23 @@ declare module "express" {
   }
 }
 // 3. Middleware
-// app.use(
-//   cors({
-//     origin: [
-//       "http://localhost:4200",
-//       "http://localhost:3000",
-//       "https://blog-mern-inky.vercel.app",
-//     ],
-//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-//     allowedHeaders: [
-//       "Content-Type",
-//       "Authorization",
-//       "X-CSRF-Token",
-//       "X-API-KEY",
-//     ],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: [
+      "http://localhost:4200",
+      "http://localhost:3000",
+      "https://blog-mern-inky.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "X-CSRF-Token",
+      "X-API-KEY",
+    ],
+    credentials: true,
+  })
+);
 // app.use(cookieParser());
 // app.use(
 //   csurf({
