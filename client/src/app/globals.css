@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body::selection {
+  background-color: orange;
+  color: white;  
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  width: 72%;
+  margin: 0 auto;
+}
+
+/* .container-desk {
+  width: 50% ;
+  margin: 0 auto;
+  background-color: aqua;
+  }
+.container-mobile {
+  width: 85% ;
+  margin: 0 auto;
+} */
+
+.dark {
+  background: #0a0a0a;
+  color: #ededed;
+}
+.light {
+  background: #fff;
+  /* background: #ededed; */
+  color: #111623;
+}
+
+.signup::-webkit-scrollbar {
+  width: 2px;
+}
+.signup::-webkit-scrollbar-track {
+  background-color: #ededed;
+}
+.signup::-webkit-scrollbar-thumb {
+  width: 15px;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+.comment-table::-webkit-scrollbar {
+  height: 5px;
+}
+.comment-table::-webkit-scrollbar-track {
+  background-color: #ededed;
+}
+.comment-table::-webkit-scrollbar-thumb {
+  width: 15px;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+.savedtext::-webkit-scrollbar {
+  width: 0;
+}
+/* aceternity UI */
+
+@theme inline {
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
+
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+}
+
+/* meteors */
+@theme inline {
+  --animate-meteor-effect: meteor 5s linear infinite;
+
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+/*  */
+.ql-toolbar.ql-snow:nth-child(1) {
+  display: none;
+}
+
+.quill {
+  height: 36.5vh;
+}
+/*  */
