@@ -1,0 +1,6 @@
+# api
+/api/node_modules
+/api/.env
+# client
+/client/node_modules
+/client/.env
