@@ -1,3 +1,5 @@
+"use client";
+
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import useLike from "../likeHook";

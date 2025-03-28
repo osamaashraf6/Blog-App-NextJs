@@ -1,3 +1,4 @@
+"use client";
 import LazyLoadingBtn from '@/features/loading/LazyLoadingBtn';
 import useUserLogic from '@/hooks/shared/userLogic';
 import React from 'react'

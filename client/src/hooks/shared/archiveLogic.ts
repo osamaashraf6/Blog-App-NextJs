@@ -1,3 +1,5 @@
+"use client";
+
 import useArchive from "../archiveHook";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";

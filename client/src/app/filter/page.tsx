@@ -1,5 +1,5 @@
 import React from 'react'
-import FilterPage from '@/pages/Filter'
+import FilterPage from '@/padges/Filter'
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: {
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     },
 };
 function Filter() {
-    return ( 
+    return (
         <>
             <FilterPage />
         </>

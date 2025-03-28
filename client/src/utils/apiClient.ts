@@ -1,3 +1,4 @@
+"use client";
 import globalService from "@/services/globalService";
 import axios from "axios";
 

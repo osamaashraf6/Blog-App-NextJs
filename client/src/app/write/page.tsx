@@ -1,5 +1,5 @@
 import React from 'react'
-import WritePage from '@/pages/Write'
+import WritePage from '@/padges/Write'
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: {

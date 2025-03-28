@@ -1,3 +1,5 @@
+"use client";
+
 // src/hooks/useTodo.js
 import { useMutation } from "@tanstack/react-query";
 import {

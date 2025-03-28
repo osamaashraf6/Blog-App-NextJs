@@ -1,5 +1,5 @@
 import React from 'react'
-import ArchivePage from '@/pages/Archive'
+import ArchivePage from '@/padges/Archive'
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: {

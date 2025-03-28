@@ -1,5 +1,5 @@
 import React from 'react'
-import UserProfilePage from '@/pages/UserProfile'
+import UserProfilePage from '@/padges/UserProfile'
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: {

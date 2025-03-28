@@ -1,3 +1,5 @@
+"use client";
+
 // import actions
 import {
   loginStart,
@@ -42,7 +44,7 @@ export const register = async (dispatch: any, user: any) => {
     return { payload: res.data };
   } catch (err: any) {
     const errorMessage = err.response?.data?.errors[0];
-    // console.log(errorMessage);
+    // console.log(err);
     dispatch(registerFailure(errorMessage));
     return { payload: null };
   }

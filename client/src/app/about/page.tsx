@@ -1,4 +1,4 @@
-import AboutPage from '@/pages/About'
+import AboutPage from '@/padges/About'
 import { Metadata } from 'next';
 import React from 'react'
 export const metadata: Metadata = {

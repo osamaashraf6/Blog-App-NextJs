@@ -1,5 +1,5 @@
 import React from 'react'
-import SavedPage from '@/pages/Saved'
+import SavedPage from '@/padges/Saved'
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: {

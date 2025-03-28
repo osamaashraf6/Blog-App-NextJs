@@ -1,5 +1,5 @@
 import LazyLoadingRoute from "@/features/loading/LazyLoadingRoute";
-import LoginPage from "@/pages/Login";
+import LoginPage from "@/padges/Login";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 export const metadata: Metadata = {

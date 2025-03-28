@@ -1,5 +1,5 @@
 import React from 'react'
-import CommentPage from '@/pages/Comment'
+import CommentPage from '@/padges/Comment'
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: {

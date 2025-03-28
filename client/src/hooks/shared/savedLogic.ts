@@ -1,3 +1,5 @@
+"use client";
+
 import { toast } from "react-toastify";
 import useSaved from "../savedHook";
 import { useSelector } from "react-redux";

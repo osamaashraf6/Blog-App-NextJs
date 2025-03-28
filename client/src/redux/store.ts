@@ -1,3 +1,4 @@
+"use client";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import userReducer from "./userslice/userSlice";
 import {

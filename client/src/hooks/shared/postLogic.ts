@@ -1,4 +1,4 @@
-// import { useNavigate, useParams } from "react-router-dom";
+"use client";
 import { useRouter } from "next/navigation";
 import usePost from "../postHook";
 import { useSelector } from "react-redux";

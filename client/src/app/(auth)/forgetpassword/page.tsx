@@ -1,5 +1,5 @@
 import React from 'react'
-import ForgetPasswordPage from "@/pages/ForgetPassword";
+import ForgetPasswordPage from "@/padges/ForgetPassword";
 import { Metadata } from "next";
 export const metadata: Metadata = {
     title: {

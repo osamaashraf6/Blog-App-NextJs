@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import useComment from "../commentHook";
 import { useSelector } from "react-redux";
@@ -7,7 +9,7 @@ import { useForm } from "react-hook-form";
 import usePost from "../postHook";
 import { useParams } from "next/navigation";
 
-const useCommentLogic = ( ) => {
+const useCommentLogic = () => {
   const [commentId, setCommentId] = useState(null);
   const [page, setPage] = useState(1);
   const { currentUser } = useSelector((state: any) => state.user);

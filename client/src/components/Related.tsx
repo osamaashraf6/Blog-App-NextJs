@@ -1,3 +1,4 @@
+"use client";
 import usePost from '@/hooks/postHook';
 import globalService from '@/services/globalService';
 import { faEye } from '@fortawesome/free-solid-svg-icons';

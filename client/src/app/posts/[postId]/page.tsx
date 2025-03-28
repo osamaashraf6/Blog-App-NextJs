@@ -1,5 +1,5 @@
 import React from 'react'
-import PostPage from '@/pages/Post'
+import PostPage from '@/padges/Post'
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: {
