@@ -43,7 +43,7 @@ app.use(
       "http://localhost:4200",
       "http://localhost:3000",
       "https://blog-mern-inky.vercel.app",
-      "https://blog-app-next-js-j.vercel.app/",
+      "https://blog-app-next-js-j.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: [
