@@ -1,6 +1,6 @@
 const globalService = {
   // baseUrl
-  baseUrl: "https://blog-app-nextjs-production.up.railway.app",
+  baseUrl: `${process.env.NEXT_PUBLIC_BASE_URL}`,
   //   Routes
   routes: {
     addresses: "/api/v1/addresses",
@@ -13,8 +13,8 @@ const globalService = {
     users: "/api/v1/users",
   },
   //   domainImgs
-  userImg: "https://blog-app-nextjs-production.up.railway.app/users/",
-  postImg: "https://blog-app-nextjs-production.up.railway.app/posts/",
+  userImg: `${process.env.NEXT_PUBLIC_BASE_URL}/users/`,
+  postImg: `${process.env.NEXT_PUBLIC_BASE_URL}/posts/`,
   //   ApiKey
   APiKey: "secret123",
 };
