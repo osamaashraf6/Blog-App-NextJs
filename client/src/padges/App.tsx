@@ -23,7 +23,7 @@ function App({ children }: any) {
                                 <Announcement />
                                 <Navbar />
                                 {children}
-                                <a href="#top" className=" fixed bottom-[50px] right-[50px] flex w-[30px] h-[30px] items-center justify-center rounded-full bg-amber-500 text-4xl">⭡</a>
+                                <a href="#top" className=" animate-bounce fixed bottom-[50px] right-[50px] flex w-[30px] h-[30px] items-center justify-center rounded-full bg-amber-500 text-4xl">⭡</a>
                                 <Footer />
                             </ThemeProvider>
                         </ThemeContextProvider>

@@ -71,7 +71,6 @@ function UserProfilePage() {
 
                                         <ul className="flex flex-col gap-6 w-full text-center">
                                             <li onClick={() => filterTabs("profile")} className="font-bold cursor-pointer  w-full  transition-all duration-150 ease-in-out hover:border-r-5 border-amber-500 py-5"><FontAwesomeIcon icon={faUser} />
-                                                {/* <span className=" absolute text-xs top-0 left-[100px] w-[100px] rounded-lg hidden place-items-center h-[25px] bg-amber-500  ">My Profile</span> */}
                                             </li>
                                             <li onClick={() => filterTabs("password")} className="font-bold cursor-pointer  w-full  transition-all duration-150 ease-in-out hover:border-r-5 border-amber-500 py-5 "><FontAwesomeIcon icon={faKey} /></li>
                                             <li onClick={() => filterTabs("address")} className="font-bold cursor-pointer  w-full  transition-all duration-150 ease-in-out border-b hover:border-r-5 border-amber-500 py-5 "><FontAwesomeIcon icon={faLocationDot} /></li>
@@ -137,7 +136,7 @@ function UserProfilePage() {
                                                         <label className="text-gray-400 ">Address</label>
                                                         <input
                                                             type="text"
-                                                            placeholder={`Address: ${user?.data?.address?.length > 0 ? `${user?.data?.address?.street}-${user?.data?.address?.city}-${user?.data?.address?.state}-${user?.data?.address?.postalCode}` : "No Address"}`}
+                                                            placeholder={`Address: ${user?.data?.address?.length > 0 ? `${user?.data?.address[0]?.street}-${user?.data?.address[0]?.city}-${user?.data?.address[0]?.state}-${user?.data?.address[0]?.postalCode}` : "No Address"}`}
                                                             className=" p-1 rounded-lg border w-full border-neutral-800  placeholder:text-xs hover:border-amber-500         placeholder:text-neutral-500"
                                                             disabled
                                                         />

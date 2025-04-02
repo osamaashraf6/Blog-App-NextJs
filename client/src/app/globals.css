@@ -146,9 +146,9 @@ html {
   }
 }
 /*  */
-.ql-toolbar.ql-snow:nth-child(1) {
+/* .ql-toolbar.ql-snow:nth-child(1) {
   display: none;
-}
+} */
 
 .quill {
   height: 36.5vh;

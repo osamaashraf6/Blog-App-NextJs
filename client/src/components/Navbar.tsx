@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { ThemeContext, ThemeContextType } from '@/context/ThemeContext'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUser, faFile, faComment, faBoxArchive, faThumbsUp, faBookmark, faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -23,6 +23,7 @@ function Navbar() {
   const toggleUserSettings = () => {
     setOpenUser((prev) => !prev);
   };
+ 
   return (
     <>
       <header className=' py-4 shadow-[-1px_4px_100px_-15px_rgba(234,_179,_8,_0.5)] '>
@@ -55,7 +56,7 @@ function Navbar() {
 
                   {/*  */}
                   <li className=""><button onClick={handleLogOut} className='cursor-pointer'>Logout</button></li>
-                  <li className=""><span className='flex cursor-pointer text-sm font-bold bg-amber-300 text-white rounded-3xl p-1'>{currentUser?.data?.name}</span></li>
+                  <li className=""><Link  href="/userprofile" className='flex cursor-pointer text-sm font-bold bg-amber-300 text-white rounded-3xl p-1'>{currentUser?.data?.name}</Link></li>
                   {/* User settings */}
                   <div className="flex gap-5 items-center pr-10">
                     <div className="relative">
@@ -146,13 +147,13 @@ function Navbar() {
                   <div onClick={() => setOpen(false)} className="times text-xl cursor-pointer">×</div>
                 </div>
                 <ul className="pt-20 flex flex-col justify-center text-xl ">
-                  <li className="border-y-1 flex py-4 "><Link href="/">Home</Link></li>
-                  <li className="border-b-1 flex py-4 "><Link href="/contact">Contact</Link></li>
-                  <li className="border-b-1 flex py-4 "><Link href="/about">About</Link></li>
-                  <li className="border-b-1 flex py-4 "><Link href="/write">Write</Link></li>
+                  <li onClick={() => setOpen(false)} className="border-y-1 flex py-4 "><Link href="/">Home</Link></li>
+                  <li onClick={() => setOpen(false)} className="border-b-1 flex py-4 "><Link href="/contact">Contact</Link></li>
+                  <li onClick={() => setOpen(false)} className="border-b-1 flex py-4 "><Link href="/about">About</Link></li>
+                  <li onClick={() => setOpen(false)} className="border-b-1 flex py-4 "><Link href="/write">Write</Link></li>
                   {currentUser?.data ? (<>
                     {/*  */}
-                    <li className=""><button onClick={handleLogOut} className='w-full border-b-1 flex py-4 cursor-pointer'>Logout</button></li>
+                    <li onClick={() => setOpenUser(false)} className=""><button onClick={handleLogOut} className='w-full border-b-1 flex py-4 cursor-pointer'>Logout</button></li>
 
                     {/* User settings */}
                     <div className="flex gap-5 items-center pr-10">
@@ -226,7 +227,7 @@ function Navbar() {
                     </div>
                     {/* User settings */}
                   </>) : (
-                    <li className="border-b-1 flex py-4 "><Link href="/login">Login</Link></li>
+                    <li onClick={() => setOpen(false)} className="border-b-1 flex py-4 "><Link href="/login">Login</Link></li>
 
                   )}
                 </ul>
