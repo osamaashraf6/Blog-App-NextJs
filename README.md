@@ -87,7 +87,7 @@
 
  
 ### 🚀 Live Demo
- Demo: [Blog-App](https://blog-app-next-js-rose.vercel.app/)
+ Demo: [Blog-App](https://blog-app-next-js-j.vercel.app/)
 
  
 
