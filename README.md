@@ -23,7 +23,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Ecommerce App] <a name="about-project"></a>
+# 📖 [Blog App] <a name="about-project"></a>
 
 - The Blog App is a dynamic platform built with the MERN stack that allows users to create, publish, and engage with blog posts on various topics. The app enables users to explore content from different authors, write articles, and share their thoughts through comments. 👌
 
