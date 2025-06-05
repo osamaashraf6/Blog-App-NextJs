@@ -47,7 +47,7 @@ app.use(
       "X-CSRF-Token",
       "X-API-KEY",
     ],
-    credentials: true,
+    credentials: true, 
   })
 );
 // app.use(cookieParser());
