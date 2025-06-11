@@ -1,44 +1,21 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "5040",
-        pathname: "/posts/**",
-      },
-      {
         protocol: "https",
         hostname: "encrypted-tbn0.gstatic.com",
-        pathname: "/images/**",
+        pathname: "/images/**", // Adjust if needed
+      },
+
+      {
+        protocol: "https",
+        hostname: "blog-appnextjs.vercel.app",
       },
     ],
   },
+  /* config options here */
 };
 
-module.exports = nextConfig;
-
-// export default nextConfig;
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   images: {
-//     remotePatterns: [
-//       {
-//         protocol: "https",
-//         hostname: "encrypted-tbn0.gstatic.com",
-//         pathname: "/images/**",
-//       },
-//       {
-//         protocol: "https",
-//         hostname: "blog-app-nextjs-production.up.railway.app",
-//         pathname: "/**",
-//       },
-//       {
-//         protocol: "https",
-//         hostname: "blog-appnextjs.vercel.app", // ✅ no https:// here
-//         pathname: "/**",
-//       },
-//     ],
-//   },
-// };
+export default nextConfig;
