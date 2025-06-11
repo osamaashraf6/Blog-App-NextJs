@@ -62,4 +62,4 @@ const i18n = new I18n({
 });
 app.use(i18n.init);
 
-app.use(express.static("uploads"));
+app.use(express.static("public"));

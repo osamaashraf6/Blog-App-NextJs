@@ -22,7 +22,7 @@ export const editFileWithBuffer = asyncHandler(
       await sharp(req.file.buffer)
         .toFormat("webp")
         .webp({ quality: 95 })
-        .toFile(`uploads/users/${imgName}`);
+        .toFile(`/users/${imgName}`);
       req.body.profileImg = imgName;
     }
 

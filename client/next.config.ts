@@ -8,13 +8,13 @@ const nextConfig: NextConfig = {
         hostname: "encrypted-tbn0.gstatic.com",
         pathname: "/images/**", // Adjust if needed
       },
+
       {
         protocol: "https",
-        hostname: "blog-app-nextjs-production.up.railway.app",
+        hostname: "blog-appnextjs.vercel.app",
       },
     ],
   },
   /* config options here */
 };
 
-export default nextConfig;
