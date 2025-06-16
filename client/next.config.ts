@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "blog-appnextjs.vercel.app",
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '5040', // Or whatever port you are using
+      },
     ],
   },
   /* config options here */

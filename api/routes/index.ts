@@ -23,9 +23,7 @@ const mountRoutes = (app: Application) => {
   app.use("/api/v1/tests", testRoute);
   app.use("/api/v1/users", userRoute);
 
-  app.all("**", (req: Request, res: Response, next: NextFunction) => {
-    next(new ApiError(400, `The Route ${req.originalUrl} Not Found !`));
-  });
+
 
   app.use(GlobalError);
 };

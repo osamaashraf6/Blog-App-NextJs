@@ -17,6 +17,7 @@ function Landing() {
         limit: 1,
         sort: "title",
     });
+    console.log("............."+globalService.postImg + data?.data[0]?.postImg);
     return (
         <>
             <section className="py-12">
@@ -26,7 +27,7 @@ function Landing() {
                         <motion.div initial='initial' whileInView='inView' viewport={{ once: true }}
                     variants={myAnimation} key={data?.data[0]?._id} className="items-center flex flex-col gap-8 md:flex-row ">
                             <div className="w-full">
-                                <Image src={`${globalService.postImg + data?.data[0]?.postImg}`} width={100} height={100} alt="Landing-Img" className=' w-[500px] h-[200px]  rounded shadow-lg md:h-[300px] md:w-[600px]' />
+                                <Image src={`${globalService.postImg + data?.data[0]?.postImg }`} width={100} height={100} alt="Landing-Img" className=' w-[500px] h-[200px]  rounded shadow-lg md:h-[300px] md:w-[600px]' />
                             </div>
                             <div className="w-full flex flex-col gap-5">
                                 <h2 className="font-bold text-2xl pr-12 capitalize ">{data?.data[0]?.title}</h2>

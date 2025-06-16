@@ -13,8 +13,8 @@ const globalService = {
     users: "/api/v1/users",
   },
   //   domainImgs
-  userImg: `${process.env.NEXT_PUBLIC_BASE_URL}/users/`,
-  postImg: `${process.env.NEXT_PUBLIC_BASE_URL}/posts/`,
+  userImg: `/users/`,
+  postImg: `/posts/`,
   //   ApiKey
   APiKey: "secret123",
 };
